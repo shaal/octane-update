@@ -1,0 +1,30 @@
+# Files produced by bad patch & diff runs
+*~*~
+*.rej
+*.diff
+*.orig
+interdiff*.txt
+
+# Local caches.
+.sass-cache
+.cache
+
+# IDE artifacts
+*~
+\#*\#
+*.swp
+.DS*
+._.DS*
+.project
+.idea
+.vscode
+.history
+.tags
+
+# Upstream dependencies.
+vendor
+node_modules
+.bundle
+
+#NPM
+npm-debug.log

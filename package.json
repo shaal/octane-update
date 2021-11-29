@@ -1,0 +1,16 @@
+{
+  "name": "@phase2/create-project",
+  "version": "1.0.0",
+  "description": "Phase2 project starter",
+  "main": "index.js",
+  "bin": {
+    "create-project": "./generate.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phase2/create-project.git"
+  },
+  "author": "Phase2",
+  "license": "ISC",
+  "homepage": "https://github.com/phase2/octane-ci#readme"
+}
