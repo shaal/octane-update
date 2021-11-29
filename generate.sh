@@ -5,7 +5,6 @@
 #       generator on first install
 #  tag: optional tag, branch or commit hash of generator.
 
-gitRef="$1"
 octaneFolder=".octane-ci"
 tmpFolder="_octane"
 
@@ -14,6 +13,7 @@ if [ "$1" == "-g" ]; then
   doGenerate=1
   shift
 fi
+gitRef="$1"
 
 if [ -e "$octaneFolder" ]; then
   echo "Updating octane-ci..."
