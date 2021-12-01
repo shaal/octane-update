@@ -5,7 +5,7 @@
 #       generator on first install
 #  tag: optional tag, branch or commit hash of generator.
 
-octaneFolder=".octane-ci"
+octaneRoot=".octane-ci"
 tmpFolder="_octane"
 
 doGenerate=0
@@ -15,7 +15,7 @@ if [ "$1" == "-g" ]; then
 fi
 gitRef="$1"
 
-if [ -e "$octaneFolder" ]; then
+if [ -e "$octaneRoot" ]; then
   echo "Updating octane-ci..."
 else
   echo "Downloading octane-ci..."
@@ -30,9 +30,14 @@ if [ ! -z "$gitRef" ]; then
   git checkout --quiet "$gitRef"
   cd - >/dev/null
 fi
-rsync --delete -ac "$tmpFolder/.octane-ci/" "$octaneFolder/"
+rsync --delete -ac "$tmpFolder/.octane-ci/" "$octaneRoot/"
 rm -rf "$tmpFolder"
 
 if [ $doGenerate -eq 1 ]; then
-  ${octaneFolder}/scripts/generate.sh
+  ${octaneRoot}/scripts/generate.sh
+elif [ -e ".env" ]; then
+  # Update the .bin folder
+  source ${octaneRoot}/scripts/makebin.sh
+  # Update the GitHub actions
+  ${octaneRoot}/scripts/build-actions.sh ${octaneRoot}/consumers/${OCTANE_CONSUMER}/actions
 fi
