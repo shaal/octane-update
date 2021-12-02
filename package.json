@@ -1,10 +1,10 @@
 {
-  "name": "@phase2/create-project",
+  "name": "@phase2/octane-update",
   "version": "1.0.0",
   "description": "Phase2 project starter",
   "main": "index.js",
   "bin": {
-    "create-project": "./generate.sh"
+    "octane-update": "./generate.sh"
   },
   "repository": {
     "type": "git",
