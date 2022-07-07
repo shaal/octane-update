@@ -7,7 +7,6 @@
     "octane-update": "./generate.sh"
   },
   "repository": "https://github.com/shaal/octane-update",
-,
   "author": "Phase2",
   "license": "ISC",
   "homepage": "https://github.com/phase2/octane-ci#readme"
