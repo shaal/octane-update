@@ -6,10 +6,8 @@
   "bin": {
     "octane-update": "./generate.sh"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shaal/octane-update.git"
-  },
+  "repository": "https://github.com/shaal/octane-update",
+,
   "author": "Phase2",
   "license": "ISC",
   "homepage": "https://github.com/phase2/octane-ci#readme"
