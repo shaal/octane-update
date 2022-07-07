@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 # Generate a new project from Octane
 # Usage: npx github:phase2/octane-update [-g] [tag]
 #  -g : optional force generator to run. Normally only runs
