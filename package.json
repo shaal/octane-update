@@ -1,12 +1,12 @@
 {
-  "name": "@shaal/octane-update",
+  "name": "octane-update",
   "version": "1.0.0",
   "description": "Phase2 project starter",
   "main": "index.js",
   "bin": {
     "octane-update": "./generate.sh"
   },
-  "registry": "https://github.com/",
+  "registry": "https://github.com/shaal",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shaal/octane-update"
